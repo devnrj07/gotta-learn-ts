@@ -1,0 +1,17 @@
+{
+  "name": "ts-projects",
+  "version": "1.0.0",
+  "description": "a collection of home assignments for typescript",
+  "main": "index.js",
+  "author": "devnrj07",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "typescript": "^4.2.3"
+  },
+  "dependencies": {
+    "@types/faker": "^5.1.7",
+    "@types/leaflet": "^1.7.0",
+    "faker": "^5.4.0"
+  }
+}
