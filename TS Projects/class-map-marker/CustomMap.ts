@@ -1,5 +1,6 @@
 export interface MapLike {
     location: { latitude: number, longitude: number }
+    title(): string
 }
 
 export class CustomMap {
@@ -29,10 +30,10 @@ export class CustomMap {
         return this;
     }
 
-    addMarker({ location: { latitude, longitude } }: MapLike) {
-        console.log({ latitude, longitude })
+    addMarker(map: MapLike) {
+        const { location: { latitude, longitude } } = map;
         this.marker = L.marker([latitude, longitude]).addTo(this.mymap)
-        this.marker.bindPopup("<b>Hello world!</b><br>I am here.").openPopup();
+        this.marker.bindPopup(map.title()).openPopup();
         return
     }
 

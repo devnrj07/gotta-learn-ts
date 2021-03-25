@@ -1,6 +1,7 @@
 import faker from 'faker'
+import { MapLike } from './CustomMap';
 
-export class User{
+export class User implements MapLike{
     name:string
     location : {
         longitude : number,
@@ -13,5 +14,9 @@ export class User{
             latitude : parseFloat(faker.address.latitude()),
             longitude : parseFloat(faker.address.longitude())
         }
+    }
+
+    title(){
+        return `User : ${this.name}`;
     }
 }
