@@ -12,7 +12,10 @@ export class Collection {
         return this.collection;
     }
 
-    length: number = this.collection.length;
+    get length(): number {
+        return this.collection.length;
+
+    }
 
     compare(leftIndex: number, rightIndex: number): boolean {
         return this.collection[leftIndex] > this.collection[rightIndex];
