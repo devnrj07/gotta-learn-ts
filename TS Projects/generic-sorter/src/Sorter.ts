@@ -5,6 +5,7 @@ export class Sorter{
      * @function sort
      * @return bubble sort the provided array of numbers, strings or LinkedList
      */
+    //Improper way to make a class library becasue It can't be extended easily
     sort():void{
         const {length} = this.collection;
         for(let i=0;i< length; i++){

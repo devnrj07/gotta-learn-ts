@@ -9,6 +9,7 @@ var Sorter = /** @class */ (function () {
      * @function sort
      * @return bubble sort the provided array of numbers, strings or LinkedList
      */
+    //Improper way to make a class library becasue It can't be extended easily
     Sorter.prototype.sort = function () {
         var length = this.collection.length;
         for (var i = 0; i < length; i++) {
