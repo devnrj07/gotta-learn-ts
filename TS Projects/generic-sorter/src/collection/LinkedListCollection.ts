@@ -1,10 +1,13 @@
+import { NewSort } from "../NewSort";
+
 class Node {
     next: Node | null = null;
     constructor(public value: number | string | object) { }
 
 }
 
-export class LinkedList {
+export class LinkedList extends NewSort{
+    
     head: Node | null = null;
 
     get length(): number {

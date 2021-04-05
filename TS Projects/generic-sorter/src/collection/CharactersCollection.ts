@@ -1,5 +1,7 @@
-export class CharactersCollection {
-    constructor(private input: string) { }
+import { NewSort } from "../NewSort";
+
+export class CharactersCollection extends NewSort {
+    constructor(private input: string) { super() }
 
     get length(): number {
         return this.input.length;
@@ -15,12 +17,12 @@ export class CharactersCollection {
 
     swap(leftI: number, rightI: number): void {
         const characters = this.input.trim().split('');
-        
+
         const tempchar = characters[leftI];
         characters[leftI] = characters[rightI];
         characters[rightI] = tempchar;
 
         //join back the string and assign it to input
-        this.input = characters.join(''); 
+        this.input = characters.join('');
     }
 }
