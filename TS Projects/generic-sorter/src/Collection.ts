@@ -8,7 +8,7 @@ export class Collection {
     constructor(private collection: number[]) {
 
     }
-    data() {
+    get data() {
         return this.collection;
     }
 

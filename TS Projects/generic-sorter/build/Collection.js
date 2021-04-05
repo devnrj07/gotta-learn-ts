@@ -5,9 +5,13 @@ var Collection = /** @class */ (function () {
     function Collection(collection) {
         this.collection = collection;
     }
-    Collection.prototype.data = function () {
-        return this.collection;
-    };
+    Object.defineProperty(Collection.prototype, "data", {
+        get: function () {
+            return this.collection;
+        },
+        enumerable: false,
+        configurable: true
+    });
     Object.defineProperty(Collection.prototype, "length", {
         get: function () {
             return this.collection.length;

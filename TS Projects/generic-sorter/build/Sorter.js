@@ -29,6 +29,16 @@ var Sorter = /** @class */ (function () {
             }
         }
     };
+    Object.defineProperty(Sorter.prototype, "data", {
+        /**
+         * getter method for read-only access to private data member
+         */
+        get: function () {
+            return this.collection;
+        },
+        enumerable: false,
+        configurable: true
+    });
     return Sorter;
 }());
 exports.Sorter = Sorter;
