@@ -1,7 +1,8 @@
 import { Sorter } from './Sorter';
 import { NewSort } from './NewSort';
 import { Collection } from './Collection';
-import { CharactersCollection } from './collection.interfaces/CharactersCollection';
+import { CharactersCollection } from './collection/CharactersCollection';
+import { LinkedList } from './collection/LinkedListCollection';
 /**
  * Main code case 1 : bad style
  */
@@ -28,3 +29,18 @@ const sortedCharacters = new NewSort(charactersCollection);
 
 sortedCharacters.sort()
 console.log('>>>Case 3:>>>>>>', charactersCollection.data);
+
+/**
+ * runner code case 4 : Extended class to support LinkedList 
+ */
+
+const LLCollection = new LinkedList();
+LLCollection.add(100)
+LLCollection.add(50)
+LLCollection.add(-100)
+console.log('>>>>>>Case 4:  Before>>>>>>>>')
+LLCollection.print()
+const sortedLL = new NewSort(LLCollection)  
+sortedLL.sort()
+console.log('>>>>>>>>case 4: After>>>>>')
+LLCollection.print()

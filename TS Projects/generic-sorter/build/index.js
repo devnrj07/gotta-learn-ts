@@ -3,7 +3,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var Sorter_1 = require("./Sorter");
 var NewSort_1 = require("./NewSort");
 var Collection_1 = require("./Collection");
-var CharactersCollection_1 = require("./collection.interfaces/CharactersCollection");
+var CharactersCollection_1 = require("./collection/CharactersCollection");
+var LinkedListCollection_1 = require("./collection/LinkedListCollection");
 /**
  * Main code case 1 : bad style
  */
@@ -24,3 +25,16 @@ var charactersCollection = new CharactersCollection_1.CharactersCollection('zAop
 var sortedCharacters = new NewSort_1.NewSort(charactersCollection);
 sortedCharacters.sort();
 console.log('>>>Case 3:>>>>>>', charactersCollection.data);
+/**
+ * runner code case 4 : Extended class to support LinkedList
+ */
+var LLCollection = new LinkedListCollection_1.LinkedList();
+LLCollection.add(100);
+LLCollection.add(50);
+LLCollection.add(-100);
+console.log('>>>>>>Case 4:  Before>>>>>>>>');
+LLCollection.print();
+var sortedLL = new NewSort_1.NewSort(LLCollection);
+sortedLL.sort();
+console.log('>>>>>>>>case 4: After>>>>>');
+LLCollection.print();
